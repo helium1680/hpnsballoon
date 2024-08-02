@@ -1,0 +1,188 @@
+html {
+    background-color: rgb(227, 247, 255);
+    background-image: url("image/stadiumrpg_2nd_bg.png");
+    background-size: cover;
+    background-position-x: 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Helvetica Neue",
+    "Arial",
+    "Hiragino Kaku Gothic ProN",
+    "Hiragino Sans",
+    "Meiryo",
+    sans-serif;
+    margin: 0;
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    display: flex;
+    width: 100%;
+    height: var(--header-height);
+    top: 0;
+    background-color: #FFFFFF;
+    align-items: center;
+    position: fixed;
+    text-decoration: none;
+    z-index: calc(infinity)
+}
+
+    a {
+        text-decoration: none;
+        color: #ff3333;
+    }
+
+    .title{
+        display: flex;
+        align-items: center;
+        height: var(--header-height);
+        font: "Helvetica";
+    }
+
+    .title_img {
+        width: 40px;
+        height: 40px;
+        margin-left: 10px;
+    }
+   
+    .title_text {
+        margin-left: 5px;
+        color: red;
+        font-weight: 1;
+        white-space: nowrap; 
+    }
+
+    .menu-item {
+        list-style: none;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    .fadeIn {
+        animation-name: fadeInAnime;/*1で解説*/
+        animation-fill-mode:backwards;/*2で解説*/
+        animation-duration:2s;/*3で解説*/
+        /* animation-delay: 0s; */
+        animation-iteration-count:1;/*4で解説*/
+        animation-timing-function:var(--easeOutExpo);/*5で解説*/
+        animation-direction:normal;/*7で解説*/
+    }
+
+    .delay-00{
+        animation-delay: var(--animation-delay);/*6で解説*/
+    }
+
+    .delay-01{
+        animation-delay: calc( var(--animation-delay) + var(--animation-delay-01) * 1 );/*6で解説*/
+    }
+
+    .delay-02{
+        animation-delay: calc( var(--animation-delay) + var(--animation-delay-01) * 2 );/*6で解説*/
+    }
+
+    .delay-03{
+        animation-delay: calc( var(--animation-delay) + var(--animation-delay-01) * 3 );/*6で解説*/
+    }
+
+    .delay-04{
+        animation-delay: calc( var(--animation-delay) + var(--animation-delay-01) * 4 );/*6で解説*/
+    }
+
+    .delay-05{
+        animation-delay: calc( var(--animation-delay) + var(--animation-delay-01) * 5 );/*6で解説*/
+    }
+
+.bg_image {
+    width: 100%;
+}
+
+.head-text-title {
+    margin-top: calc(25% - var(--head-text-font-size));
+    margin-bottom: calc(25% - var(--head-text-font-size) - var(--header-height));
+    margin-left: 5%;
+    color: #fff;
+    font-size: var(--head-text-font-size);
+    text-align: left;
+    font-weight: 550;
+}
+
+.head-text-subtitle {
+    font-size: calc(var(--head-text-font-size) / 2);
+}
+
+.head-text-bg-red {
+    display: inline;
+    line-height: 1.4em;
+    background: linear-gradient(transparent 0%, #FF3333dd 0%);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;  
+}
+
+.main {
+    background-color: #ffffffdd;
+}
+
+.main-text {
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.main-text-title {
+    font-size: 50px;
+    color: #ff5555;
+}
+
+td {
+    vertical-align: top;
+    text-align: left;
+    padding-left: 10px;
+}
+
+th {
+    white-space: nowrap;
+    text-align: left;
+    vertical-align: top;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: var(--footer-height);
+    top: 0;
+    background-color: #FFFFFF55;
+    align-items: center;
+    text-decoration: none;
+    z-index: calc(infinity)
+}
+
+.footer_text {
+    margin-left: auto;
+    margin-right: 5px;
+    color: #000000;
+    font-weight: bolder;
+}
+
+@keyframes fadeInAnime{
+    0% {
+    opacity: 0;
+    transform: translateY(calc(var(--header-height) / -5));
+    }
+
+    100% {
+    opacity: 1;
+    transform: translateY(0px);
+    }
+}
+
+:root {
+    --easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
+    --animation-delay: 0.2s;
+    --animation-delay-01: 0.1s;
+    --header-height: 50px;
+    --head-text-font-size: 40px;
+    --footer-height: 30px;
+}
