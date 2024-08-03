@@ -1,5 +1,5 @@
 html {
-    background-color: rgb(227, 247, 255);
+    background-color: rgb(180, 180, 180);
     background-image: url("image/stadiumrpg_2nd_bg.png");
     background-size: cover;
     background-position-x: 50%;
@@ -182,7 +182,7 @@ footer {
     --easeOutExpo: cubic-bezier(0.16, 1, 0.3, 1);
     --animation-delay: 0.2s;
     --animation-delay-01: 0.1s;
-    --header-height: 50px;
+    --header-height: 40px;
     --head-text-font-size: 40px;
     --footer-height: 30px;
 }
